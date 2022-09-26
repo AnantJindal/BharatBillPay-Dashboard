@@ -1,0 +1,308 @@
+// Some Common Styling
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    max-width: 1140px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+$fontColor: #6F767E;
+$backgroundColor: #FFFFFF;
+
+// Header Styling
+
+header {
+    background: $backgroundColor;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    .container {
+        padding: 18px 24px;
+        justify-content: space-between;
+    }
+}
+
+// MainPart Styling
+.mainPart {
+    background: #F5F5F5;
+    display: flex;
+
+    .container {
+        padding: 0;
+        margin-top: 6%;
+
+        // SideBar Styling
+        aside {
+            background: $backgroundColor;
+            position: fixed;
+
+            .innerContainer {
+                padding: 32px 24px;
+height: 100vh;
+                ul {
+                    flex-direction: column;
+
+                    li {
+                        padding-top: 32px;
+                        display: flex;
+
+                        span {
+                            padding-left: 12px;
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 20px;
+                            color: $fontColor;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        // Welcome Section styling
+        .welcomeSection {
+
+            padding: 22px 24px;
+            margin-left: 19%;
+
+            .section1 {
+                display: flex;
+                justify-content: space-between;
+
+                h1 {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 32px;
+                    color: #0A1129;
+                }
+                // .options{
+                //     display: flex;
+                //     gap: 20px;
+                // }
+                .side-bar {
+                    display: flex;
+                    .select {
+                      border-radius: 6px;
+                      background-color: #ffffff;
+                    }
+                    .date-month {
+                      display: flex;
+                      margin-left: 10px;
+                      justify-content: center;
+                    }
+                    select {
+                        background-color: #ffffff;
+                      border: none;
+                      padding: 10px 25px;
+                      border-top-left-radius: 6px;
+                      border-bottom-left-radius: 6px;
+                    }
+                    input {
+                      border: none;
+                      padding: 10px;
+                      border-top-right-radius: 6px;
+                      border-bottom-right-radius: 6px;
+                    }
+                  }
+          
+            }
+
+            // ul {
+            //     li {
+            //         background: #FFFFFF;
+            //         border-radius: 6px;
+            //         margin-left: 16px;
+            //         height: 42px;
+            //         padding: 4px 9px;
+            //         font-weight: 400;
+            //         font-size: 14px;
+            //         line-height: 20px;
+            //         color: $fontColor;
+
+            //         img {
+            //             margin-left: 30px;
+            //             margin-top: 5px;
+            //         }
+
+            //         ;
+            //     }
+
+            //     #li {
+            //         span:first-child {
+            //             border-right: 1px solid #DFE2E6;
+            //             transform: rotate(90deg);
+            //             ;
+            //         }
+
+            //         span:last-child {
+            //             margin-left: 4px;
+            //         }
+            //     }
+            // }
+
+           
+            // Top Cards Styling
+            .cards {
+                margin-top: 16px;
+                display: flex;
+
+                .card {
+                    padding: 24px;
+                    background-color: $backgroundColor;
+                    margin-left: 16px;
+                    width: 276px;
+
+                    p {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #878E95;
+                    }
+
+                    span {
+                        padding-top: 12px;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 32px;
+                        color: #050915;
+                    }
+
+                    label {
+                        margin-left: 10px;
+                        padding: 5px;
+                        background: rgba(131, 191, 110, 0.1);
+                        border-radius: 5px;
+                        padding-top: 12px;
+                        font-weight: 500;
+                        font-size: 10px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        color: #83BF6E;
+
+                    }
+
+                    .success {
+                        color: #FF6A55;
+                        background: #F5F5F5;
+                    }
+                }
+
+                .card:first-child {
+                    margin-left: 0;
+                }
+            }
+
+
+            //  Decline Part Styling
+            .decline {
+                margin-top: 20px;
+
+                .header {
+                    background-color: $backgroundColor;
+                    padding: 10px 20px;
+                    display: flex;
+                    gap: 440px;
+                    border-bottom: 0.5px solid #C0C0C0;
+
+                    h2 {
+                        margin-top: 1%;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: #4A5056;
+
+                    }
+                }
+
+                .cards {
+                    margin-top: 0px;
+
+                    .card {
+                        .heading {
+                            background-color: $backgroundColor;
+                            display: flex;
+                            gap: 10px;
+                            border: 0.5px solid #DDDDE4;
+                            border-radius: 12px 12px 0px 0px;
+                            padding: 10px 20px;
+
+                            h4 {
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #222529;
+                                margin-top: 2%;
+                            }
+
+                            label {
+                                background: #F4F4F4;
+                                color: #222529;
+                                padding: 8px;
+                            }
+                        }
+
+                        ul {
+                            flex-direction: column;
+                            background: #F5F5F5;
+
+                            li {
+                                padding: 10px;
+                                margin-top: 16px;
+                                margin-left: 0px;
+                                display: flex;
+                                background: #FFFFFF;
+                                border: 0.5px solid #DBDBDB;
+                                border-radius: 6px;
+                                justify-content: space-between;
+                                border-left: 1px solid rgb(255, 0, 0);
+
+                                p {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    color: #6F767E;
+                                    width: 70%;
+                                    align-self: center;
+                                }
+
+                                .number {
+                                    display: flex;
+                                    span {
+                                        font-weight: 500;
+                                        font-size: 16px;
+                                        line-height: 19px;
+                                        text-align: right;
+                                        letter-spacing: 0.1px;
+                                        color: #44444F;
+                                    }
+                                    img{
+                                        margin-left: 0px;
+                                        height: 15px;
+                                        width: 20px;
+                                        margin-left: 6px;
+                                        margin-top: 13px;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

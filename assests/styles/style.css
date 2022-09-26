@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  max-width: 1140px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header {
+  background: #FFFFFF;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+header .container {
+  padding: 18px 24px;
+  justify-content: space-between;
+}
+
+.mainPart {
+  background: #F5F5F5;
+  display: flex;
+}
+.mainPart .container {
+  padding: 0;
+  margin-top: 6%;
+}
+.mainPart .container aside {
+  background: #FFFFFF;
+  position: fixed;
+}
+.mainPart .container aside .innerContainer {
+  padding: 32px 24px;
+  height: 100vh;
+}
+.mainPart .container aside .innerContainer ul {
+  flex-direction: column;
+}
+.mainPart .container aside .innerContainer ul li {
+  padding-top: 32px;
+  display: flex;
+}
+.mainPart .container aside .innerContainer ul li span {
+  padding-left: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #6F767E;
+}
+.mainPart .container .welcomeSection {
+  padding: 22px 24px;
+  margin-left: 19%;
+}
+.mainPart .container .welcomeSection .section1 {
+  display: flex;
+  justify-content: space-between;
+}
+.mainPart .container .welcomeSection .section1 h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #0A1129;
+}
+.mainPart .container .welcomeSection .section1 .side-bar {
+  display: flex;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .select {
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month {
+  display: flex;
+  margin-left: 10px;
+  justify-content: center;
+}
+.mainPart .container .welcomeSection .section1 .side-bar select {
+  background-color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.mainPart .container .welcomeSection .section1 .side-bar input {
+  border: none;
+  padding: 10px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.mainPart .container .welcomeSection .cards {
+  margin-top: 16px;
+  display: flex;
+}
+.mainPart .container .welcomeSection .cards .card {
+  padding: 24px;
+  background-color: #FFFFFF;
+  margin-left: 16px;
+  width: 276px;
+}
+.mainPart .container .welcomeSection .cards .card p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #878E95;
+}
+.mainPart .container .welcomeSection .cards .card span {
+  padding-top: 12px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #050915;
+}
+.mainPart .container .welcomeSection .cards .card label {
+  margin-left: 10px;
+  padding: 5px;
+  background: rgba(131, 191, 110, 0.1);
+  border-radius: 5px;
+  padding-top: 12px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  color: #83BF6E;
+}
+.mainPart .container .welcomeSection .cards .card .success {
+  color: #FF6A55;
+  background: #F5F5F5;
+}
+.mainPart .container .welcomeSection .cards .card:first-child {
+  margin-left: 0;
+}
+.mainPart .container .welcomeSection .decline {
+  margin-top: 20px;
+}
+.mainPart .container .welcomeSection .decline .header {
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+  display: flex;
+  gap: 440px;
+  border-bottom: 0.5px solid #C0C0C0;
+}
+.mainPart .container .welcomeSection .decline .header h2 {
+  margin-top: 1%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4A5056;
+}
+.mainPart .container .welcomeSection .decline .cards {
+  margin-top: 0px;
+}
+.mainPart .container .welcomeSection .decline .cards .card .heading {
+  background-color: #FFFFFF;
+  display: flex;
+  gap: 10px;
+  border: 0.5px solid #DDDDE4;
+  border-radius: 12px 12px 0px 0px;
+  padding: 10px 20px;
+}
+.mainPart .container .welcomeSection .decline .cards .card .heading h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222529;
+  margin-top: 2%;
+}
+.mainPart .container .welcomeSection .decline .cards .card .heading label {
+  background: #F4F4F4;
+  color: #222529;
+  padding: 8px;
+}
+.mainPart .container .welcomeSection .decline .cards .card ul {
+  flex-direction: column;
+  background: #F5F5F5;
+}
+.mainPart .container .welcomeSection .decline .cards .card ul li {
+  padding: 10px;
+  margin-top: 16px;
+  margin-left: 0px;
+  display: flex;
+  background: #FFFFFF;
+  border: 0.5px solid #DBDBDB;
+  border-radius: 6px;
+  justify-content: space-between;
+  border-left: 1px solid rgb(255, 0, 0);
+}
+.mainPart .container .welcomeSection .decline .cards .card ul li p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6F767E;
+  width: 70%;
+  align-self: center;
+}
+.mainPart .container .welcomeSection .decline .cards .card ul li .number {
+  display: flex;
+}
+.mainPart .container .welcomeSection .decline .cards .card ul li .number span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  letter-spacing: 0.1px;
+  color: #44444F;
+}
+.mainPart .container .welcomeSection .decline .cards .card ul li .number img {
+  margin-left: 0px;
+  height: 15px;
+  width: 20px;
+  margin-left: 6px;
+  margin-top: 13px;
+}/*# sourceMappingURL=style.css.map */
