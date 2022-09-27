@@ -7,8 +7,8 @@
 .container {
   display: flex;
   padding: 20px;
-  width: 100%;
-  max-width: 1140px;
+  width: 100vw;
+  margin: auto;
 }
 
 ul {
@@ -27,6 +27,57 @@ header .container {
   padding: 18px 24px;
   justify-content: space-between;
 }
+header .container div {
+  position: relative;
+  margin-right: 3%;
+}
+header .container div .menu {
+  display: none;
+}
+header .container div img {
+  cursor: pointer;
+}
+header .container .dropbtn {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+header .container .dropdown {
+  position: relative;
+  display: inline-block;
+}
+header .container .dropdown label {
+  display: flex;
+  align-items: center;
+}
+header .container .dropdown label img {
+  padding-left: 10px;
+}
+header .container .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F1F1F1;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 3%;
+  z-index: 1;
+}
+header .container .dropdown-content a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+header .container .dropdown-content a:hover {
+  background-color: #ddd;
+}
+header .container .dropcheck {
+  position: absolute;
+  visibility: hidden;
+}
+header .container .dropcheck:checked ~ .dropdown-content {
+  display: block;
+}
 
 .mainPart {
   background: #F5F5F5;
@@ -34,22 +85,29 @@ header .container {
 }
 .mainPart .container {
   padding: 0;
-  margin-top: 6%;
+  margin-top: 76px;
 }
 .mainPart .container aside {
   background: #FFFFFF;
   position: fixed;
+  margin: 0px;
 }
 .mainPart .container aside .innerContainer {
   padding: 32px 24px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 195px;
+  width: 188px;
 }
 .mainPart .container aside .innerContainer ul {
   flex-direction: column;
 }
 .mainPart .container aside .innerContainer ul li {
-  padding-top: 32px;
+  margin-top: 32px;
+  margin-left: 10px;
   display: flex;
+  cursor: pointer;
 }
 .mainPart .container aside .innerContainer ul li span {
   padding-left: 12px;
@@ -58,9 +116,25 @@ header .container {
   line-height: 20px;
   color: #6F767E;
 }
+.mainPart .container aside .innerContainer ul li:first-child {
+  margin-top: 0px;
+}
+.mainPart .container aside .innerContainer ul .active {
+  padding: 10px 0px;
+  background: #F1F3F5;
+  border-radius: 4px;
+  margin-left: 0px;
+  padding-left: 10px;
+}
+.mainPart .container aside .innerContainer ul .active span {
+  color: #1E357D;
+}
 .mainPart .container .welcomeSection {
   padding: 22px 24px;
-  margin-left: 19%;
+  margin-left: 246px;
+  padding-right: 0px;
+  margin-right: 1%;
+  width: 100%;
 }
 .mainPart .container .welcomeSection .section1 {
   display: flex;
@@ -75,52 +149,152 @@ header .container {
 .mainPart .container .welcomeSection .section1 .side-bar {
   display: flex;
 }
-.mainPart .container .welcomeSection .section1 .side-bar .select {
+.mainPart .container .welcomeSection .section1 .side-bar .dropbtnb {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .dropdownAll {
+  position: relative;
+  display: inline-block;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .dropdownAll .dropbtnAll {
+  display: flex;
+  align-items: center;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .dropdownAll .dropbtnAll img {
+  padding-left: 10px;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .dropdown-contentAll {
+  display: none;
+  position: absolute;
+  background-color: #F1F1F1;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 3%;
+  z-index: 0;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .dropdown-contentAll a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .dropdown-contentAll a:hover {
+  background-color: #ddd;
+}
+.mainPart .container .welcomeSection .section1 .side-bar #dropcheckAll {
+  position: absolute;
+  visibility: hidden;
+}
+.mainPart .container .welcomeSection .section1 .side-bar #dropcheckAll:checked ~ .dropdown-contentAll {
+  display: block;
+}
+.mainPart .container .welcomeSection .section1 .side-bar div {
+  position: relative;
   border-radius: 6px;
   background-color: #ffffff;
 }
+.mainPart .container .welcomeSection .section1 .side-bar div .select {
+  position: absolute;
+  right: 0;
+  outline: none;
+  cursor: pointer;
+}
 .mainPart .container .welcomeSection .section1 .side-bar .date-month {
-  display: flex;
+  outline: none;
   margin-left: 10px;
   justify-content: center;
+  cursor: pointer;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month .Datedropbtn {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month .Datedropdown {
+  position: relative;
+  display: inline-block;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month .Datedropdown label {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  color: #6F767E;
+  font-size: 14px;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month .Datedropdown label img {
+  padding-left: 30px;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month .Datedropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F1F1F1;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 3%;
+  z-index: 1;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month .Datedropdown-content a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month .Datedropdown-content a:hover {
+  background-color: #ddd;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month .Datedropcheck {
+  position: absolute;
+  visibility: hidden;
+}
+.mainPart .container .welcomeSection .section1 .side-bar .date-month .Datedropcheck:checked ~ .Datedropdown-content {
+  display: block;
 }
 .mainPart .container .welcomeSection .section1 .side-bar select {
   background-color: #ffffff;
   border: none;
-  padding: 10px 25px;
+  padding: 10px 86px 10px 15px;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  color: #6F767E;
 }
 .mainPart .container .welcomeSection .section1 .side-bar input {
+  outline: none;
   border: none;
   padding: 10px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
+  cursor: pointer;
+  color: #6F767E;
 }
-.mainPart .container .welcomeSection .cards {
+.mainPart .container .welcomeSection .topcards {
   margin-top: 16px;
   display: flex;
 }
-.mainPart .container .welcomeSection .cards .card {
+.mainPart .container .welcomeSection .topcards .topcard {
   padding: 24px;
   background-color: #FFFFFF;
   margin-left: 16px;
-  width: 276px;
+  width: 32%;
+  border-radius: 12px;
 }
-.mainPart .container .welcomeSection .cards .card p {
+.mainPart .container .welcomeSection .topcards .topcard p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #878E95;
 }
-.mainPart .container .welcomeSection .cards .card span {
+.mainPart .container .welcomeSection .topcards .topcard span {
   padding-top: 12px;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   color: #050915;
 }
-.mainPart .container .welcomeSection .cards .card label {
+.mainPart .container .welcomeSection .topcards .topcard label {
   margin-left: 10px;
   padding: 5px;
   background: rgba(131, 191, 110, 0.1);
@@ -132,11 +306,11 @@ header .container {
   letter-spacing: -0.01em;
   color: #83BF6E;
 }
-.mainPart .container .welcomeSection .cards .card .success {
+.mainPart .container .welcomeSection .topcards .topcard .success {
   color: #FF6A55;
   background: #F5F5F5;
 }
-.mainPart .container .welcomeSection .cards .card:first-child {
+.mainPart .container .welcomeSection .topcards .topcard:first-child {
   margin-left: 0;
 }
 .mainPart .container .welcomeSection .decline {
@@ -146,8 +320,10 @@ header .container {
   background-color: #FFFFFF;
   padding: 10px 20px;
   display: flex;
-  gap: 440px;
+  justify-content: space-between;
   border-bottom: 0.5px solid #C0C0C0;
+  border-radius: 12px 12px 0px;
+  border-bottom-left-radius: 0px;
 }
 .mainPart .container .welcomeSection .decline .header h2 {
   margin-top: 1%;
@@ -157,7 +333,17 @@ header .container {
   color: #4A5056;
 }
 .mainPart .container .welcomeSection .decline .cards {
-  margin-top: 0px;
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 0px 0px 12px;
+}
+.mainPart .container .welcomeSection .decline .cards .card {
+  padding: 24px;
+  width: 33%;
+  background: #FAFAFB;
+  border: 0.5px solid #DDDDE4;
+  border-radius: 12px;
+  margin: 24px 16px;
 }
 .mainPart .container .welcomeSection .decline .cards .card .heading {
   background-color: #FFFFFF;
@@ -178,12 +364,13 @@ header .container {
   background: #F4F4F4;
   color: #222529;
   padding: 8px;
+  border-radius: 20px;
 }
 .mainPart .container .welcomeSection .decline .cards .card ul {
   flex-direction: column;
   background: #F5F5F5;
 }
-.mainPart .container .welcomeSection .decline .cards .card ul li {
+.mainPart .container .welcomeSection .decline .cards .card ul .li {
   padding: 10px;
   margin-top: 16px;
   margin-left: 0px;
@@ -192,9 +379,8 @@ header .container {
   border: 0.5px solid #DBDBDB;
   border-radius: 6px;
   justify-content: space-between;
-  border-left: 1px solid rgb(255, 0, 0);
 }
-.mainPart .container .welcomeSection .decline .cards .card ul li p {
+.mainPart .container .welcomeSection .decline .cards .card ul .li p {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -202,10 +388,10 @@ header .container {
   width: 70%;
   align-self: center;
 }
-.mainPart .container .welcomeSection .decline .cards .card ul li .number {
+.mainPart .container .welcomeSection .decline .cards .card ul .li .number {
   display: flex;
 }
-.mainPart .container .welcomeSection .decline .cards .card ul li .number span {
+.mainPart .container .welcomeSection .decline .cards .card ul .li .number span {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -213,10 +399,57 @@ header .container {
   letter-spacing: 0.1px;
   color: #44444F;
 }
-.mainPart .container .welcomeSection .decline .cards .card ul li .number img {
+.mainPart .container .welcomeSection .decline .cards .card ul .li .number img {
   margin-left: 0px;
   height: 15px;
   width: 20px;
   margin-left: 6px;
-  margin-top: 13px;
+  margin-top: 3px;
+}
+.mainPart .container .welcomeSection .decline .cards .card ul .li-severe {
+  border-left: 1px solid #E53A3A;
+}
+.mainPart .container .welcomeSection .decline .cards .card ul .li-major {
+  border-left: 1px solid #F3BA51;
+}
+.mainPart .container .welcomeSection .decline .cards .card :first-child {
+  margin-left: 0px;
+}
+
+@media all and (max-width: 992px) {
+  header .container div {
+    margin-right: 2%;
+  }
+  header .container #visibility {
+    right: 3%;
+  }
+  .mainPart .container aside {
+    display: none;
+  }
+  .mainPart .container .welcomeSection {
+    margin-left: 0px;
+  }
+  .mainPart .container .welcomeSection .topcards {
+    flex-wrap: wrap;
+    width: 85vw;
+  }
+  .mainPart .container .welcomeSection .topcards .topcard {
+    margin-left: 0px;
+    width: 97%;
+    margin-top: 10px;
+  }
+  .mainPart .container .welcomeSection .decline .cards {
+    flex-wrap: wrap;
+    width: 92vw;
+  }
+  .mainPart .container .welcomeSection .decline .cards .card {
+    width: 100%;
+    margin-left: 0px;
+    padding: 24px 0px;
+  }
+}
+@media all and (max-width: 768px) {
+  .mainPart .container .welcomeSection .section1 .side-bar {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

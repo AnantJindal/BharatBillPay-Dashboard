@@ -9,8 +9,9 @@
 .container {
     display: flex;
     padding: 20px;
-    width: 100%;
-    max-width: 1140px;
+    width: 100vw;
+    margin: auto;
+
 }
 
 ul {
@@ -33,6 +34,71 @@ header {
     .container {
         padding: 18px 24px;
         justify-content: space-between;
+
+        div {
+            position: relative;
+            margin-right: 3%;
+
+            .menu {
+                display: none;
+            }
+
+            img {
+                cursor: pointer;
+            }
+
+        }
+
+        .dropbtn {
+            position: relative;
+            display: block;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+
+            label {
+                display: flex;
+                align-items: center;
+
+                img {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #F1F1F1;
+            min-width: 80px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            right: 3%;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropcheck {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .dropcheck:checked~.dropdown-content {
+            display: block;
+        }
+
     }
 }
 
@@ -43,22 +109,30 @@ header {
 
     .container {
         padding: 0;
-        margin-top: 6%;
+        margin-top: 76px;
 
         // SideBar Styling
         aside {
             background: $backgroundColor;
             position: fixed;
+            margin: 0px;
 
             .innerContainer {
                 padding: 32px 24px;
-height: 100vh;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                gap: 195px;
+                width: 188px;
+
                 ul {
                     flex-direction: column;
 
                     li {
-                        padding-top: 32px;
+                        margin-top: 32px;
+                        margin-left: 10px;
                         display: flex;
+                        cursor: pointer;
 
                         span {
                             padding-left: 12px;
@@ -66,6 +140,22 @@ height: 100vh;
                             font-size: 18px;
                             line-height: 20px;
                             color: $fontColor;
+                        }
+                    }
+
+                    li:first-child {
+                        margin-top: 0px;
+                    }
+
+                    .active {
+                        padding: 10px 0px;
+                        background: #F1F3F5;
+                        border-radius: 4px;
+                        margin-left: 0px;
+                        padding-left: 10px;
+
+                        span {
+                            color: #1E357D;
                         }
                     }
                 }
@@ -77,7 +167,10 @@ height: 100vh;
         .welcomeSection {
 
             padding: 22px 24px;
-            margin-left: 19%;
+            margin-left: 246px;
+            padding-right: 0px;
+            margin-right: 1%;
+            width: 100%;
 
             .section1 {
                 display: flex;
@@ -89,82 +182,174 @@ height: 100vh;
                     line-height: 32px;
                     color: #0A1129;
                 }
-                // .options{
-                //     display: flex;
-                //     gap: 20px;
-                // }
+
                 .side-bar {
                     display: flex;
-                    .select {
-                      border-radius: 6px;
-                      background-color: #ffffff;
+
+                    .dropbtnb {
+                        position: relative;
+                        display: block;
+                        cursor: pointer;
                     }
+
+                    .dropdownAll {
+                        position: relative;
+                        display: inline-block;
+
+                        .dropbtnAll {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+
+                    .dropdown-contentAll {
+                        display: none;
+                        position: absolute;
+                        background-color: #F1F1F1;
+                        min-width: 170px;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        right: 3%;
+                        z-index: 0;
+                    }
+
+                    .dropdown-contentAll a {
+                        color: #000000;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+
+                    .dropdown-contentAll a:hover {
+                        background-color: #ddd;
+                    }
+
+                    #dropcheckAll {
+                        position: absolute;
+                        visibility: hidden;
+                    }
+
+                    #dropcheckAll:checked~.dropdown-contentAll {
+                        display: block;
+                    }
+
+
+                    div {
+                        position: relative;
+                        border-radius: 6px;
+                        background-color: #ffffff;
+
+                        .select {
+                            position: absolute;
+                            right: 0;
+                            outline: none;
+                            cursor: pointer;
+                        }
+                    }
+
                     .date-month {
-                      display: flex;
-                      margin-left: 10px;
-                      justify-content: center;
+                        // display: flex;
+                        outline: none;
+                        margin-left: 10px;
+                        justify-content: center;
+                        cursor: pointer;
+
+
+                        .Datedropbtn {
+                            position: relative;
+                            display: block;
+                            cursor: pointer;
+                        }
+
+                        .Datedropdown {
+                            position: relative;
+                            display: inline-block;
+
+                            label {
+                                display: flex;
+                                align-items: center;
+                                padding: 5px 10px;
+                                color:
+                                    #6F767E;
+                                font-size: 14px;
+
+                                img {
+                                    padding-left: 30px;
+                                }
+                            }
+                        }
+
+                        .Datedropdown-content {
+                            display: none;
+                            position: absolute;
+                            background-color: #F1F1F1;
+                            min-width: 130px;
+                            // width: 13%;
+                            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                            right: 3%;
+                            z-index: 1;
+                        }
+
+                        .Datedropdown-content a {
+                            color: #000000;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+                        }
+
+                        .Datedropdown-content a:hover {
+                            background-color: #ddd;
+                        }
+
+                        .Datedropcheck {
+                            position: absolute;
+                            visibility: hidden;
+                        }
+
+                        .Datedropcheck:checked~.Datedropdown-content {
+                            display: block;
+                        }
+
                     }
+
                     select {
                         background-color: #ffffff;
-                      border: none;
-                      padding: 10px 25px;
-                      border-top-left-radius: 6px;
-                      border-bottom-left-radius: 6px;
+                        border: none;
+                        padding: 10px 86px 10px 15px;
+                        border-top-left-radius: 6px;
+                        border-bottom-left-radius: 6px;
+                        outline: none;
+                        cursor: pointer;
+                        color: #6F767E;
                     }
+
                     input {
-                      border: none;
-                      padding: 10px;
-                      border-top-right-radius: 6px;
-                      border-bottom-right-radius: 6px;
+                        outline: none;
+                        border: none;
+                        padding: 10px;
+                        border-top-right-radius: 6px;
+                        border-bottom-right-radius: 6px;
+                        cursor: pointer;
+                        color: #6F767E;
                     }
-                  }
-          
+                }
+
             }
 
-            // ul {
-            //     li {
-            //         background: #FFFFFF;
-            //         border-radius: 6px;
-            //         margin-left: 16px;
-            //         height: 42px;
-            //         padding: 4px 9px;
-            //         font-weight: 400;
-            //         font-size: 14px;
-            //         line-height: 20px;
-            //         color: $fontColor;
-
-            //         img {
-            //             margin-left: 30px;
-            //             margin-top: 5px;
-            //         }
-
-            //         ;
-            //     }
-
-            //     #li {
-            //         span:first-child {
-            //             border-right: 1px solid #DFE2E6;
-            //             transform: rotate(90deg);
-            //             ;
-            //         }
-
-            //         span:last-child {
-            //             margin-left: 4px;
-            //         }
-            //     }
-            // }
-
-           
             // Top Cards Styling
-            .cards {
+            .topcards {
                 margin-top: 16px;
                 display: flex;
 
-                .card {
+                .topcard {
                     padding: 24px;
                     background-color: $backgroundColor;
                     margin-left: 16px;
-                    width: 276px;
+                    width: 32%;
+                    border-radius: 12px;
 
                     p {
                         font-weight: 400;
@@ -201,7 +386,7 @@ height: 100vh;
                     }
                 }
 
-                .card:first-child {
+                .topcard:first-child {
                     margin-left: 0;
                 }
             }
@@ -215,8 +400,10 @@ height: 100vh;
                     background-color: $backgroundColor;
                     padding: 10px 20px;
                     display: flex;
-                    gap: 440px;
+                    justify-content: space-between;
                     border-bottom: 0.5px solid #C0C0C0;
+                    border-radius: 12px 12px 0px;
+                    border-bottom-left-radius: 0px;
 
                     h2 {
                         margin-top: 1%;
@@ -224,14 +411,22 @@ height: 100vh;
                         font-size: 18px;
                         line-height: 22px;
                         color: #4A5056;
-
                     }
                 }
 
                 .cards {
-                    margin-top: 0px;
+                    display: flex;
+                    background: #FFFFFF;
+                    border-radius: 0px 0px 12px;
 
                     .card {
+                        padding: 24px;
+                        width: 33%;
+                        background: #FAFAFB;
+                        border: 0.5px solid #DDDDE4;
+                        border-radius: 12px;
+                        margin: 24px 16px;
+
                         .heading {
                             background-color: $backgroundColor;
                             display: flex;
@@ -252,6 +447,7 @@ height: 100vh;
                                 background: #F4F4F4;
                                 color: #222529;
                                 padding: 8px;
+                                border-radius: 20px;
                             }
                         }
 
@@ -259,7 +455,7 @@ height: 100vh;
                             flex-direction: column;
                             background: #F5F5F5;
 
-                            li {
+                            .li {
                                 padding: 10px;
                                 margin-top: 16px;
                                 margin-left: 0px;
@@ -268,7 +464,6 @@ height: 100vh;
                                 border: 0.5px solid #DBDBDB;
                                 border-radius: 6px;
                                 justify-content: space-between;
-                                border-left: 1px solid rgb(255, 0, 0);
 
                                 p {
                                     font-weight: 400;
@@ -281,6 +476,7 @@ height: 100vh;
 
                                 .number {
                                     display: flex;
+
                                     span {
                                         font-weight: 500;
                                         font-size: 16px;
@@ -289,20 +485,124 @@ height: 100vh;
                                         letter-spacing: 0.1px;
                                         color: #44444F;
                                     }
-                                    img{
+
+                                    img {
                                         margin-left: 0px;
                                         height: 15px;
                                         width: 20px;
                                         margin-left: 6px;
-                                        margin-top: 13px;
+                                        margin-top: 3px;
                                     }
                                 }
-                                
+
+                            }
+
+                            .li-severe {
+                                border-left: 1px solid #E53A3A;
+                            }
+
+                            .li-major {
+                                border-left: 1px solid #F3BA51;
+
                             }
                         }
+                    }
+
+                    .card :first-child {
+                        margin-left: 0px;
                     }
                 }
             }
         }
     }
 }
+
+
+@media all and (max-width:992px) {
+
+    // Header
+    header {
+        .container {
+            div {
+                margin-right: 2%;
+            }
+
+            #visibility {
+                right: 3%;
+            }
+        }
+    }
+
+    // MainPart Styling
+    .mainPart {
+        .container {
+
+            // SideBar Styling
+            aside {
+                display: none;
+            }
+
+            // Welcome Section styling
+            .welcomeSection {
+                margin-left: 0px;
+
+                .topcards {
+                    flex-wrap: wrap;
+                    width: 85vw;
+
+                    .topcard {
+                        margin-left: 0px;
+                        width: 97%;
+                        margin-top: 10px;
+                    }
+                }
+
+                .decline {
+                    .cards {
+                        flex-wrap: wrap;
+                        width: 92vw;
+
+                        .card {
+                            width: 100%;
+                            margin-left: 0px;
+                            padding: 24px 0px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+@media all and (max-width:768px) {
+    .mainPart {
+        .container {
+            .welcomeSection {
+                .section1 {
+                    .side-bar {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// select {
+//     appearance: none;
+// }
+
+// .arw-select {
+//     position: relative;
+// }
+
+// .arw-select::after {
+//     content: url(../images/dropdown.svg);
+//     right: 0;
+//     top: 5px;
+//     position: absolute;
+// }

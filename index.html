@@ -18,7 +18,13 @@
     <header>
         <div class="container">
             <img src="assests/images/bharat.svg" alt="Logo">
-            <img src="assests/images/userLogo.svg" alt="UserIcon">
+            <div class="dropdown">
+                <input id="dropcheck" class="dropcheck" type="checkbox">
+                <label for="dropcheck" class="dropbtn"><img src="assests/images/userLogo.svg"></label>
+                <div class="dropdown-content">
+                    <a href="#">Logout</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -26,92 +32,82 @@
     <div class="mainPart">
         <div class="container">
             <!-- SideBar Part -->
+
             <aside>
                 <div class="innerContainer">
                     <ul>
-                        <li>
+                        <li class="">
                             <img src="assests/images/Home.svg" alt="Home">
                             <span>Home</span>
                         </li>
-                        <li>
+                        <li class="">
                             <img src="assests/images/summary.svg" alt="Summary">
                             <span>Summary</span>
                         </li>
-                        <li>
+                        <li class="active">
                             <img src="assests/images/performance.svg" alt="Performance">
                             <span>Performance</span>
                         </li>
-                        <li>
+                        <li class="">
                             <img src="assests/images/transcition.svg" alt="Transicition">
                             <span>Transaction Query</span>
                         </li>
-                        <li>
+                        <li class="">
                             <img src="assests/images/contact.svg" alt="Contact">
                             <span>Contact Details</span>
                         </li>
                     </ul>
+                    <div class="dashboard-logo"><img src="./assests/images/NPCLI.svg"></div>
                 </div>
             </aside>
+
+            <!-- Welcome Section -->
 
             <div class="welcomeSection">
 
                 <section class="section1">
                     <h1> Welcome, MSEDCL </h1>
-                    <!-- 
-                    <ul>
-                        <li>
-                            <span>All BOU</span>
-                            <img src="assests/images/dropdown.svg" alt="dropdown">
-                        </li>
-                        <li id="li">
-                            <span>This Month
-                                <img src="assests/images/dropdown.svg" alt="dropdown">
-                            </span>
-                            <span>
-                                Jan 1 - Jan 31
-                                <img src="assests/images/calendar.svg" alt="Calendar">
-                            </span>
-                        </li>
-                    </ul> -->
-                    <!-- <div class="options">
-                        <select>
-                            <option value="">All Bou</option>
-                        </select>
-                        <div class="calendar">
-                            <select>
-                                <option value="">This Month</option>
-                            </select>
-                            <input type="date">
-                        </div>
-                    </div> -->
+
 
                     <div class="side-bar">
-                        <select class="select">
-                          <option>All BOU</option>
-                        </select>
-                        <div class="date-month">
-                          <select >
-                            <option>This month</option>
-                          </select>
-                          <img src="assests/images/Line 159.svg" />
-                          <input type="date" />
+                        <div class="dropdownAll">
+                            <input id="dropcheckAll" class="dropcheckAll" type="checkbox">
+                            <label for="dropcheckAll" class="dropbtnAll"><img src="assests/images/allbou.png"></label>
+                            <div class="dropdown-contentAll">
+                                <a href="#">Myth</a>
+                            </div>
                         </div>
 
+
+                        <div class="date-month">
+                            <div class="Datedropdown">
+                                <input id="Datedropcheck" class="Datedropcheck" type="checkbox">
+                                <label for="Datedropcheck" class="Datedropbtn">This Month <span><img
+                                            src="assests/images/dropdown.svg"></span></label>
+                                <div class="Datedropdown-content">
+                                    <a href="#">Months</a>
+                                </div>
+                            </div>
+                            <img src="assests/images/Line 159.svg" />
+                            <input type="date" />
+
+
                 </section>
+
                 <!-- Top Cards -->
 
-                <div class="cards">
-                    <div class="card">
+                <div class="topcards">
+                    <div class="topcard">
                         <p>Payments processed by BOU</p>
                         <span>₹ 3,45,267</span>
                         <label>37.8%</label>
                     </div>
-                    <div class="card">
+                    <div class="topcard">
                         <p>Fetch Success Ratio</p>
                         <span>90%</span>
                         <label class="success">37.8%</label>
                     </div>
-                    <div class="card">
+                    <div class="topcard">
                         <p>Payment Success Ratio</p>
                         <span>90%</span>
                         <label class="success">37.8%</label>
@@ -121,7 +117,6 @@
                 <!-- Decline Part -->
 
                 <div class="decline">
-                    <!-- <div class="container"> -->
                     <!-- Header Part -->
                     <div class="header">
                         <h2>Top Decline Reasons</h2>
@@ -131,6 +126,7 @@
                         </ul>
                     </div>
 
+                    <!-- Card Part -->
                     <div class="cards">
                         <div class="card">
                             <div class="heading">
@@ -139,14 +135,15 @@
                                 <label>340</label>
                             </div>
                             <ul>
-                                <li>
+                                <li class="li li-severe">
                                     <p>No billing data available</p>
                                     <div class="number">
                                         <span>76</span>
                                         <img src="assests/images/updown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+
+                                <li class="li li-severe">
                                     <p>Payment received for the
                                         billing period- No bill due</p>
                                     <div class="number">
@@ -154,7 +151,7 @@
                                         <img src="assests/images/greenUpDown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-major">
                                     <p>Unable to get bill details
                                         from biller</p>
                                     <div class="number">
@@ -162,7 +159,7 @@
                                         <img src="assests/images/greenUpDown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-major">
                                     <p>Payment received for the billing period- No bill due</p>
                                     <div class="number">
                                         <span>15</span>
@@ -178,35 +175,35 @@
                                 <label>300</label>
                             </div>
                             <ul>
-                                <li>
+                                <li class="li li-severe">
                                     <p>Timeout at BOU</p>
                                     <div class="number">
                                         <span>80</span>
                                         <img src="assests/images/updown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-severe">
                                     <p>Unable to connect to BOU</p>
                                     <div class="number">
                                         <span>42</span>
                                         <img src="assests/images/updown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-major">
                                     <p>Payment can be accepted at this time </p>
                                     <div class="number">
                                         <span>35</span>
                                         <img src="assests/images/greenUpDown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-major">
                                     <p>PRNS013, RNS014 </p>
                                     <div class="number">
                                         <span>15</span>
                                         <img src="assests/images/updown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-major">
                                     <p>ERR010 </p>
                                     <div class="number">
                                         <span>15</span>
@@ -222,42 +219,42 @@
                                 <label>160</label>
                             </div>
                             <ul>
-                                <li>
+                                <li class="li li-severe">
                                     <p>Unable to get bill details</p>
                                     <div class="number">
                                         <span>80</span>
                                         <img src="assests/images/updown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-severe">
                                     <p>Send failed to BOU</p>
                                     <div class="number">
                                         <span>42</span>
                                         <img src="assests/images/updown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-severe">
                                     <p>BRP033 </p>
                                     <div class="number">
                                         <span>35</span>
                                         <img src="assests/images/updown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-major">
                                     <p>RNS012</p>
                                     <div class="number">
                                         <span>15</span>
                                         <img src="assests/images/updown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-major">
                                     <p>Unable to connect to BOU</p>
                                     <div class="number">
                                         <span>15</span>
                                         <img src="assests/images/updown.svg" alt="UpDown">
                                     </div>
                                 </li>
-                                <li>
+                                <li class="li li-major">
                                     <p>Send failed to BOU</p>
                                     <div class="number">
                                         <span>15</span>
@@ -266,12 +263,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- </div> -->
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+
+
 </body>
 
 </html>
