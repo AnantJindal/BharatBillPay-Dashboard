@@ -175,7 +175,8 @@ header {
             .section1 {
                 display: flex;
                 justify-content: space-between;
-
+                flex-wrap: wrap;
+                gap: 10px;
                 h1 {
                     font-weight: 500;
                     font-size: 24px;
@@ -454,6 +455,7 @@ header {
                         ul {
                             flex-direction: column;
                             background: #F5F5F5;
+                            padding: 10px;
 
                             .li {
                                 padding: 10px;
@@ -497,11 +499,11 @@ header {
 
                             }
 
-                            .li-severe {
+                            .severe {
                                 border-left: 1px solid #E53A3A;
                             }
 
-                            .li-major {
+                            .major {
                                 border-left: 1px solid #F3BA51;
 
                             }
@@ -524,7 +526,7 @@ header {
     header {
         .container {
             div {
-                margin-right: 2%;
+                margin-right: 8%;
             }
 
             #visibility {
@@ -547,8 +549,9 @@ header {
                 margin-left: 0px;
 
                 .topcards {
+
                     flex-wrap: wrap;
-                    width: 85vw;
+                        width: 96vw;
 
                     .topcard {
                         margin-left: 0px;
@@ -577,18 +580,66 @@ header {
 }
 
 @media all and (max-width:768px) {
+    header .container .dropdown{
+        margin-right: 8%;
+    }
     .mainPart {
         .container {
             .welcomeSection {
+
+
+                // Top cards
+
+
+                .topcards {
+                        width: 93vw;
+
+                }
+                .decline .header {width: 87vw;}
                 .section1 {
                     .side-bar {
-                        display: none;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        .dropdownAll{
+                            .dropdown-contentAll{
+                                z-index: 799;
+                            }
+                        }
+                        .date-month{
+                        margin-left: 0px;
+                        }
                     }
+                    
                 }
             }
         }
     }
+
 }
+@media all and (max-width:425px) {
+    header .container .dropdown{
+        margin-right: 8%;
+    }
+    .mainPart {
+        .container {
+            .welcomeSection {
+
+
+                // Top cards
+
+
+                .topcards {
+                        width: 83vw;
+
+                }
+            }
+        }
+    }
+
+}
+
+
+
 
 
 

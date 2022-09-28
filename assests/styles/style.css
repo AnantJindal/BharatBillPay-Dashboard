@@ -139,6 +139,8 @@ header .container .dropcheck:checked ~ .dropdown-content {
 .mainPart .container .welcomeSection .section1 {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .mainPart .container .welcomeSection .section1 h1 {
   font-weight: 500;
@@ -369,6 +371,7 @@ header .container .dropcheck:checked ~ .dropdown-content {
 .mainPart .container .welcomeSection .decline .cards .card ul {
   flex-direction: column;
   background: #F5F5F5;
+  padding: 10px;
 }
 .mainPart .container .welcomeSection .decline .cards .card ul .li {
   padding: 10px;
@@ -406,10 +409,10 @@ header .container .dropcheck:checked ~ .dropdown-content {
   margin-left: 6px;
   margin-top: 3px;
 }
-.mainPart .container .welcomeSection .decline .cards .card ul .li-severe {
+.mainPart .container .welcomeSection .decline .cards .card ul .severe {
   border-left: 1px solid #E53A3A;
 }
-.mainPart .container .welcomeSection .decline .cards .card ul .li-major {
+.mainPart .container .welcomeSection .decline .cards .card ul .major {
   border-left: 1px solid #F3BA51;
 }
 .mainPart .container .welcomeSection .decline .cards .card :first-child {
@@ -418,7 +421,7 @@ header .container .dropcheck:checked ~ .dropdown-content {
 
 @media all and (max-width: 992px) {
   header .container div {
-    margin-right: 2%;
+    margin-right: 8%;
   }
   header .container #visibility {
     right: 3%;
@@ -431,7 +434,7 @@ header .container .dropcheck:checked ~ .dropdown-content {
   }
   .mainPart .container .welcomeSection .topcards {
     flex-wrap: wrap;
-    width: 85vw;
+    width: 96vw;
   }
   .mainPart .container .welcomeSection .topcards .topcard {
     margin-left: 0px;
@@ -449,7 +452,31 @@ header .container .dropcheck:checked ~ .dropdown-content {
   }
 }
 @media all and (max-width: 768px) {
+  header .container .dropdown {
+    margin-right: 8%;
+  }
+  .mainPart .container .welcomeSection .topcards {
+    width: 93vw;
+  }
+  .mainPart .container .welcomeSection .decline .header {
+    width: 87vw;
+  }
   .mainPart .container .welcomeSection .section1 .side-bar {
-    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .mainPart .container .welcomeSection .section1 .side-bar .dropdownAll .dropdown-contentAll {
+    z-index: 799;
+  }
+  .mainPart .container .welcomeSection .section1 .side-bar .date-month {
+    margin-left: 0px;
+  }
+}
+@media all and (max-width: 425px) {
+  header .container .dropdown {
+    margin-right: 8%;
+  }
+  .mainPart .container .welcomeSection .topcards {
+    width: 83vw;
   }
 }/*# sourceMappingURL=style.css.map */
